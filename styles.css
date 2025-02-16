@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #ffebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.screen {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Игровой контейнер */
+.game-container {
+    position: relative;
+    width: 80vw; /* Ширина 80% от ширины окна */
+    height: 60vh; /* Высота 60% от высоты окна */
+    background-color: #fff;
+    border: 2px solid #ff4081;
+    overflow: hidden;
+    margin: 0 auto; /* Центрирование */
+}
+
+#player {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #ff4081;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    touch-action: none; /* Для работы на телефоне */
+}
+
+.heart {
+    position: absolute;
+    width: 50px; /* Увеличиваем ширину сердечка */
+    height: 50px; /* Увеличиваем высоту сердечка */
+    background-image: url('heart.png'); /* Путь к вашему изображению */
+    background-size: cover; /* Чтобы изображение полностью покрывало элемент */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Падение до нижней границы контейнера */
+    }
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff4081;
+}
+
+.loading-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #ff4081;
+    transition: width 0.5s;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между кнопками */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4081;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1744;
+}
+
+#yes-button {
+    padding: 30px 60px; /* Увеличиваем padding для большей кнопки */
+    font-size: 32px; /* Увеличиваем размер шрифта */
+}
+
+#no-button {
+    padding: 10px 20px; /* Оставляем стандартный размер */
+    font-size: 18px; /* Оставляем стандартный размер шрифта */
+}
+
+#love-screen {
+    background-color: #ffebee;
+    padding: 20px;
+    border-radius: 10px;
+}
