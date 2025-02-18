@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Приветственный экран -->
     <div id="welcome-screen" class="screen">
-        <h1>Привет, дорогая!</h1>
-        <p>Собери 5 сердечек, чтобы узнать секретное сообщение!</p>
+        <h1>Привет, Ксюня!</h1>
+        <p>Собери 10 сердечек, чтобы узнать секретное сообщение!</p>
         <button id="start-button">Начать игру</button>
     </div>
 
-    <!-- Игровой экран -->
     <div id="game-screen" class="screen hidden">
         <div class="game-container">
             <div id="player"></div>
@@ -22,7 +20,6 @@
         <div id="score">Собрано сердечек: 0</div>
     </div>
 
-    <!-- Экран загрузки -->
     <div id="loading-screen" class="screen hidden">
         <h1>Загрузка любви...</h1>
         <div class="loading-bar">
@@ -30,7 +27,6 @@
         </div>
     </div>
 
-    <!-- Финальный экран -->
     <div id="final-screen" class="screen hidden">
         <h1>Будешь моей валентинкой?</h1>
         <div class="buttons">
@@ -39,16 +35,24 @@
         </div>
     </div>
 
-    <!-- Страница с признанием -->
     <div id="love-screen" class="screen hidden">
-        <h1>Я тебя люблю! ❤️</h1>
-        <p>Ты самая лучшая! Спасибо, что ты есть у меня!</p>
+        <h1>Я тебя люблю, Кися! ❤️</h1>
+        <p>Ты самая лучшая!</p>
+        <p>Тудааа его!</p>
     </div>
 
-    <!-- Аудио для кнопки "Нет" -->
-    <audio id="song">
-        <source src="song.mp3" type="audio/mpeg">
-        Ваш браузер не поддерживает аудио.
+    <!-- Аудио -->
+    <audio id="background-music" loop>
+        <source src="extras/background-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="collect-sound">
+        <source src="extras/collect-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win-sound">
+        <source src="extras/win-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="no-button-sound">
+        <source src="extras/no-button-sound.mp3" type="audio/mpeg">
     </audio>
 
     <script src="script.js"></script>

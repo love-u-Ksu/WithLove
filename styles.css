@@ -18,15 +18,14 @@ body {
     display: none;
 }
 
-/* Игровой контейнер */
 .game-container {
     position: relative;
-    width: 80vw; /* Ширина 80% от ширины окна */
-    height: 60vh; /* Высота 60% от высоты окна */
+    width: 80vw;
+    height: 60vh;
     background-color: #fff;
     border: 2px solid #ff4081;
     overflow: hidden;
-    margin: 0 auto; /* Центрирование */
+    margin: 0 auto;
 }
 
 #player {
@@ -38,21 +37,21 @@ body {
     height: 50px;
     background-color: #ff4081;
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    touch-action: none; /* Для работы на телефоне */
+    touch-action: none;
 }
 
 .heart {
     position: absolute;
-    width: 50px; /* Увеличиваем ширину сердечка */
-    height: 50px; /* Увеличиваем высоту сердечка */
-    background-image: url('heart.png'); /* Путь к вашему изображению */
-    background-size: cover; /* Чтобы изображение полностью покрывало элемент */
+    width: 50px;
+    height: 50px;
+    background-image: url('extras/heart.png');
+    background-size: cover;
     animation: fall linear infinite;
 }
 
 @keyframes fall {
     to {
-        transform: translateY(100vh); /* Падение до нижней границы контейнера */
+        transform: translateY(100vh);
     }
 }
 
@@ -82,7 +81,7 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Расстояние между кнопками */
+    gap: 20px;
 }
 
 button {
@@ -101,17 +100,29 @@ button:hover {
 }
 
 #yes-button {
-    padding: 30px 60px; /* Увеличиваем padding для большей кнопки */
-    font-size: 32px; /* Увеличиваем размер шрифта */
+    padding: 30px 60px;
+    font-size: 32px;
 }
 
+#yes-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+
 #no-button {
-    padding: 10px 20px; /* Оставляем стандартный размер */
-    font-size: 18px; /* Оставляем стандартный размер шрифта */
+    padding: 10px 20px;
+    font-size: 18px;
 }
 
 #love-screen {
     background-color: #ffebee;
     padding: 20px;
     border-radius: 10px;
+}
+
+.yes-button-timer {
+    font-size: 14px;
+    color: #555;
+    margin-left: 5px;
 }
